@@ -501,7 +501,7 @@ body {
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
 	.buttons {
 		width: 750px;
 		margin-left: auto;
