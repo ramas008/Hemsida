@@ -501,24 +501,15 @@ body {
 }
 
 
-@media only screen and (max-device-width: 480px) {
-	#topBorder {
-		width: 100%;
-		height: 60px;
-		background-color: #000000;
-		position: fixed;
-		top: 0;
-		z-index: 10;
-	}
-
+@media (max-width: 750px) {
 	.buttons {
-		width: 480px;
+		width: 750px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.buttons a {
-		width: 96px;
+		width: 150px;
 		height: 60px;
 		float: left;
 		text-decoration: none;
@@ -539,34 +530,6 @@ body {
 		background-position: center;
 	}
 
-	.buttons .selected p {
-		color: #000000;
-	}
-
-	.buttons .aboutButton p{
-		width: 53px;
-	}
-
-	.buttons .portfolioButton p {
-		width: 90px;
-	}
-
-	.buttons .RALogo p {
-		margin-top: 11px;
-		font-family: BrandonBlack;
-		font-size: 20pt;
-		color: #990000;
-		width: 35px;
-	}
-
-	.buttons .CVButton p {
-		width: 23px;
-	}
-
-	.buttons .contactButton p {
-		width: 75px;
-	}
-
 	/* ================================== */
 	/* ================================== */
 	/* ================================== */
@@ -576,14 +539,14 @@ body {
 	/* ================================== */
 
 	#content {
-		width: 480px;
+		width: 750px;
 		height: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	#floatPusher {
-		width: 480px;
+		width: 375px;
 		height: 10px;
 		float: left;
 	}
@@ -592,44 +555,27 @@ body {
 		position: fixed;
 		bottom: 0px;
 		z-index: -1;
-		width: 480px;
-		height: 762px;
-		margin-bottom: 29px;
-		background-size: 480px;
+		width: 355px;
+		height: 541px;
+		margin-bottom: 59px;
+		background-size: 355px;
 		background-repeat: no-repeat;
-		background-image: none;
+		background-image: url('Images/profile.png');
+		margin-left: 20px;
 	}
 
 	.rightContent {
 		float: left;
-		width: 440px;
-		margin-top: 100px;
+		width: 355px;
+		margin-top: 200px;
 		height: auto;
-		margin-left: 20px;
 	}
 
 	.rightContent h1 {
 		font-family: BrandonBlack;
-		font-size: 40pt;
+		font-size: 32pt;
 		color: #000000;
 	}
-
-	.rightContent h2 {
-		font-family: BrandonBlack;
-		font-size: 13pt;
-		color: #000000;
-	}
-
-	.rightContent p {
-		margin-top: 40px;
-		font-family: BrandonLight;
-		font-size: 13pt;
-		color: #000000;
-	}
-
-	/* ================================== */
-	/* ================================== */
-	/* ================================== */
 
 	/* ================================== */
 	/* ======== CONTACT CONTENT ========= */
@@ -639,40 +585,21 @@ body {
 		position: fixed;
 		bottom: 0px;
 		z-index: -1;
-		width: 480px;
-		height: 762px;
+		width: 355px;
+		height: 541px;
 		margin-bottom: 59px;
-		background-size: 500px;
+		background-size: 355px;
 		background-repeat: no-repeat;
-		background-image: none;
+		background-image: url('Images/profile2.png');
+		margin-left: 20px;
 	}
 
 	.rightContentContact {
 		float: left;
-		width: 440px;
-		margin-top: 100px;
+		width: 355px;
+		margin-top: 200px;
 		margin-left: 20px;
 		height: auto;
-	}
-
-	.rightContentContact h1 {
-		font-family: BrandonBlack;
-		font-size: 40pt;
-		color: #000000;
-		margin-bottom: 40px;
-	}
-
-	.rightContentContact h2 {
-		margin-top: 10px;
-		font-family: BrandonBlack;
-		font-size: 13pt;
-		color: #000000;
-	}
-
-	.rightContentContact p {
-		font-family: BrandonLight;
-		font-size: 13pt;
-		color: #000000;
 	}
 
 	/* ================================== */
@@ -685,136 +612,42 @@ body {
 
 	.leftContentPortfolio {
 		z-index: -1;
-		width: 480px;
+		width: 355px;
 		height: auto;
 		margin-top: 100px;
 	}
 
 	.leftContentPortfolio a {
-		margin-left: 25px;
+		margin-left: 20px;
 		margin-bottom: 30px;
 		border-style: solid;
-		border-width: 2px;
-		width: 40px;
-		height: 40px;
+		border-width: 5px;
+		width: 150px;
+		height: 150px;
 		float: left;
 		z-index: -1;
 	}
 
-	.leftContentPortfolio a:hover {
-		color: #000000;
-	}
-	.leftContentPortfolio a:visited {
-		color: #000000;
-	}
-	.leftContentPortfolio a:link {
-		color: #000000;
-	}
-	.leftContentPortfolio a:active {
-		color: #000000;
-	}
-
-	.warlockarena {
-		background-image: url('Images/warlockarena/warlockarena.jpg');
-		background-position: center;
-		background-size: 240px;
-		background-repeat: no-repeat;
-	}
-
-	.tson {
-		background-image: url('Images/tson/tsonlogo.png');
-		background-position: center;
-		background-size: 160px;
-		background-repeat: no-repeat;
-	}
-
-	.ssao {
-		background-image: url('Images/ssao1/ssao.png');
-		background-position: center;
-		background-size: 250px;
-		background-repeat: no-repeat;
-	}
-
-	.meshdissolver {
-		background-image: url('Images/meshdissolver/bunny.png');
-		background-position: center;
-		background-size: 320px;
-		background-repeat: no-repeat;
-	}
-
-	.projectiris {
-		background-image: url('Images/projectiris/projectiris1.jpg');
-		background-position: center;
-		background-size: 360px;
-		background-repeat: no-repeat;
-	}
-
-	.sypris {
-		background-image: url('Images/sypris/sypris1.png');
-		background-position: center;
-		background-size: 320px;
-		background-repeat: no-repeat;
-	}
-
-	.imagecolor {
-		background-image: url('Images/imagecolor/color1.png');
-		background-position: right;
-		background-size: 1000px;
-		background-repeat: no-repeat;
-	}
-
-	.spaceball {
-		background-image: url('Images/spaceball/spaceball1.png');
-		background-position: center;
-		background-size: 320px;
-		background-repeat: no-repeat;
-	}
-
-	.poolsim {
-		background-image: url('Images/poolsim/poolsim1.png');
-		background-position: center;
-		background-size: 250px;
-		background-repeat: no-repeat;
-	}
-
-	.greygames {
-		background-image: url('Images/greygames/greygames1.png');
-		background-position: center;
-		background-size: 350px;
-		background-repeat: no-repeat;
-	}
-
-	.infovis {
-		background-image: url('Images/infovis/infovis1.jpg');
-		background-position: center;
-		background-size: 350px;
-		background-repeat: no-repeat;
-	}
-
 	.rightContentPortfolio {
 		float: left;
-		width: 440px;
-		margin-top: 220px;
-		margin-left: 20px;
+		width: 355px;
+		margin-top: 100px;
 		height: auto;
 	}
 
 	.collabTool {
-		width: 440px;
+		width: 355px;
 		height: auto;
 	}
 
 	.collabTool .collab {
-		width: 220px;
+		width: 175px;
 		float: left;
 	}
 
 	.collabTool .tool {
-		width: 220px;
+		width: 175px;
 		float: left;
-	}
-	.collabTool .tool ul {
-		list-style-type: none;
 	}
 
 	.collabTool .tool li {
@@ -829,21 +662,15 @@ body {
 	}
 
 	.pictures {
-		width: 440px;
+		width: 355px;
 		height: auto;
 		float: left;
 	}
 
 	.attach {
-		width: 440px;
+		width: 355px;
 		height: auto;
 		float: left;
-	}
-
-	.attach i {
-		color: #000000;
-		float: left;
-		margin-right: 10px;
 	}
 
 	.rightContentPortfolio h1 {
@@ -851,19 +678,6 @@ body {
 		font-size: 30pt;
 		color: #000000;
 		margin-bottom: 20px;
-	}
-
-	.rightContentPortfolio h2 {
-		margin-top: 10px;
-		font-family: BrandonBlack;
-		font-size: 13pt;
-		color: #000000;
-	}
-
-	.rightContentPortfolio p {
-		font-family: BrandonLight;
-		font-size: 13pt;
-		color: #000000;
 	}
 
 	/* ================================== */
@@ -878,40 +692,21 @@ body {
 		position: fixed;
 		bottom: 0px;
 		z-index: -1;
-		width: 480px;
-		height: 762px;
+		width: 355px;
+		height: 541px;
 		margin-bottom: 59px;
-		background-size: 500px;
+		background-size: 355px;
 		background-repeat: no-repeat;
-		background-image: none;
+		background-image: url('Images/cv.png');
+		margin-left: 20px;
 	}
 
 	.rightContentCV {
 		float: left;
-		width: 440px;
-		margin-top: 100px;
+		width: 355px;
+		margin-top: 200px;
 		margin-left: 20px;
 		height: auto;
-	}
-
-	.rightContentCV h1 {
-		font-family: BrandonBlack;
-		font-size: 40pt;
-		color: #000000;
-		margin-bottom: 40px;
-	}
-
-	.rightContentCV h2 {
-		margin-top: 10px;
-		font-family: BrandonBlack;
-		font-size: 13pt;
-		color: #000000;
-	}
-
-	.rightContentCV p {
-		font-family: BrandonLight;
-		font-size: 13pt;
-		color: #000000;
 	}
 
 	/* ================================== */
@@ -922,63 +717,15 @@ body {
 	/* ========= BOTTOM BORDER ========== */
 	/* ================================== */
 
-	#bottomBorder {
-		position: fixed;
-		bottom: 0;
-		background-color: #000000;
-		height: 60px;
-		width: 100%;
-	}
-
 	.links {
-		width: 480px;
+		width: 750px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.links a i {
-		text-decoration: none;
-		float: right;
-		margin-top: 12px;
-		margin-right: 50px;
-		color: #ececec;
-	}
-
-	.links a:link {
-		color: #000000;
-	}
-
-	.links a:visited {
-		color: #000000;
-	}
-
-	.links a:hover {
-		color: #000000;
-	}
-
-	.links a:active {
-		color: #000000;
-	}
-
 	/* ================================== */
 	/* ================================== */
 	/* ================================== */
 
-	.thumb {
-		float:left; /* must be floated for same cross browser position of larger image */
-		position:relative;
-		margin-right: 5px;
-	}
-	.thumb:hover {
-		border:0; /* IE6 needs this to show large image */
-		z-index:1;
-	}
-	.thumb span { 
-		position:absolute;
-		visibility:hidden;
-	}
-	.thumb:hover span { 
-		visibility:visible;
-		bottom:55px; left:55px; 
-	}
 }
+
