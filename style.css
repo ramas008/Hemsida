@@ -499,3 +499,62 @@ body {
 	visibility:visible;
 	bottom:55px; left:55px; 
 }
+
+
+@media only screen and (max-device-width: 480px) {
+	.buttons {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.buttons a {
+		width: 250px;
+		height: 100px;
+		float: left;
+		text-decoration: none;
+	}
+
+	.buttons a p {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 19px;
+
+		font-family: BrandonLight;
+		color: #ececec;
+		font-size: 12pt;
+	}
+
+	.buttons .selected {
+		background-image: url('Images/Buttons/selected.png');
+		background-position: center;
+	}
+
+	.buttons .selected p {
+		color: #000000;
+	}
+
+	.buttons .aboutButton p{
+		width: 53px;
+	}
+
+	.buttons .portfolioButton p {
+		width: 90px;
+	}
+
+	.buttons .RALogo p {
+		margin-top: 11px;
+		font-family: BrandonBlack;
+		font-size: 20pt;
+		color: #990000;
+		width: 35px;
+	}
+
+	.buttons .CVButton p {
+		width: 23px;
+	}
+
+	.buttons .contactButton p {
+		width: 75px;
+	}
+}
