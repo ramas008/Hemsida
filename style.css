@@ -502,15 +502,24 @@ body {
 
 
 @media only screen and (max-device-width: 480px) {
+	#topBorder {
+		width: 100%;
+		height: 60px;
+		background-color: #000000;
+		position: fixed;
+		top: 0;
+		z-index: 10;
+	}
+
 	.buttons {
-		width: 1000px;
+		width: 480px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.buttons a {
-		width: 250px;
-		height: 100px;
+		width: 96px;
+		height: 60px;
 		float: left;
 		text-decoration: none;
 	}
@@ -526,7 +535,7 @@ body {
 	}
 
 	.buttons .selected {
-		background-image: url('Images/Buttons/selected.png');
+		background-color: #990000;
 		background-position: center;
 	}
 
@@ -556,5 +565,420 @@ body {
 
 	.buttons .contactButton p {
 		width: 75px;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	/* ================================== */
+	/* ========= ABOUT CONTENT ========== */
+	/* ================================== */
+
+	#content {
+		width: 480px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#floatPusher {
+		width: 480px;
+		height: 10px;
+		float: left;
+	}
+
+	.leftContent {
+		position: fixed;
+		bottom: 0px;
+		z-index: -1;
+		width: 480px;
+		height: 762px;
+		margin-bottom: 29px;
+		background-size: 480px;
+		background-repeat: no-repeat;
+		background-image: none;
+	}
+
+	.rightContent {
+		float: left;
+		width: 440px;
+		margin-top: 100px;
+		height: auto;
+		margin-left: 20px;
+	}
+
+	.rightContent h1 {
+		font-family: BrandonBlack;
+		font-size: 40pt;
+		color: #000000;
+	}
+
+	.rightContent h2 {
+		font-family: BrandonBlack;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	.rightContent p {
+		margin-top: 40px;
+		font-family: BrandonLight;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	/* ================================== */
+	/* ======== CONTACT CONTENT ========= */
+	/* ================================== */
+
+	.leftContentContact {
+		position: fixed;
+		bottom: 0px;
+		z-index: -1;
+		width: 480px;
+		height: 762px;
+		margin-bottom: 59px;
+		background-size: 500px;
+		background-repeat: no-repeat;
+		background-image: none;
+	}
+
+	.rightContentContact {
+		float: left;
+		width: 440px;
+		margin-top: 100px;
+		margin-left: 20px;
+		height: auto;
+	}
+
+	.rightContentContact h1 {
+		font-family: BrandonBlack;
+		font-size: 40pt;
+		color: #000000;
+		margin-bottom: 40px;
+	}
+
+	.rightContentContact h2 {
+		margin-top: 10px;
+		font-family: BrandonBlack;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	.rightContentContact p {
+		font-family: BrandonLight;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	/* ================================== */
+	/* ======= PORTFOLIO CONTENT ======== */
+	/* ================================== */
+
+	.leftContentPortfolio {
+		z-index: -1;
+		width: 480px;
+		height: auto;
+		margin-top: 100px;
+	}
+
+	.leftContentPortfolio a {
+		margin-left: 25px;
+		margin-bottom: 30px;
+		border-style: solid;
+		border-width: 2px;
+		width: 40px;
+		height: 40px;
+		float: left;
+		z-index: -1;
+	}
+
+	.leftContentPortfolio a:hover {
+		color: #000000;
+	}
+	.leftContentPortfolio a:visited {
+		color: #000000;
+	}
+	.leftContentPortfolio a:link {
+		color: #000000;
+	}
+	.leftContentPortfolio a:active {
+		color: #000000;
+	}
+
+	.warlockarena {
+		background-image: url('Images/warlockarena/warlockarena.jpg');
+		background-position: center;
+		background-size: 240px;
+		background-repeat: no-repeat;
+	}
+
+	.tson {
+		background-image: url('Images/tson/tsonlogo.png');
+		background-position: center;
+		background-size: 160px;
+		background-repeat: no-repeat;
+	}
+
+	.ssao {
+		background-image: url('Images/ssao1/ssao.png');
+		background-position: center;
+		background-size: 250px;
+		background-repeat: no-repeat;
+	}
+
+	.meshdissolver {
+		background-image: url('Images/meshdissolver/bunny.png');
+		background-position: center;
+		background-size: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.projectiris {
+		background-image: url('Images/projectiris/projectiris1.jpg');
+		background-position: center;
+		background-size: 360px;
+		background-repeat: no-repeat;
+	}
+
+	.sypris {
+		background-image: url('Images/sypris/sypris1.png');
+		background-position: center;
+		background-size: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.imagecolor {
+		background-image: url('Images/imagecolor/color1.png');
+		background-position: right;
+		background-size: 1000px;
+		background-repeat: no-repeat;
+	}
+
+	.spaceball {
+		background-image: url('Images/spaceball/spaceball1.png');
+		background-position: center;
+		background-size: 320px;
+		background-repeat: no-repeat;
+	}
+
+	.poolsim {
+		background-image: url('Images/poolsim/poolsim1.png');
+		background-position: center;
+		background-size: 250px;
+		background-repeat: no-repeat;
+	}
+
+	.greygames {
+		background-image: url('Images/greygames/greygames1.png');
+		background-position: center;
+		background-size: 350px;
+		background-repeat: no-repeat;
+	}
+
+	.infovis {
+		background-image: url('Images/infovis/infovis1.jpg');
+		background-position: center;
+		background-size: 350px;
+		background-repeat: no-repeat;
+	}
+
+	.rightContentPortfolio {
+		float: left;
+		width: 440px;
+		margin-top: 220px;
+		margin-left: 20px;
+		height: auto;
+	}
+
+	.collabTool {
+		width: 440px;
+		height: auto;
+	}
+
+	.collabTool .collab {
+		width: 220px;
+		float: left;
+	}
+
+	.collabTool .tool {
+		width: 220px;
+		float: left;
+	}
+	.collabTool .tool ul {
+		list-style-type: none;
+	}
+
+	.collabTool .tool li {
+		background: #000000;
+		float: left;
+		margin-right: 5px;
+		margin-top: 2px;
+		padding: 5px;
+		border-radius: 4px;
+		color: #ececec;
+		font-family: BrandonLight;
+	}
+
+	.pictures {
+		width: 440px;
+		height: auto;
+		float: left;
+	}
+
+	.attach {
+		width: 440px;
+		height: auto;
+		float: left;
+	}
+
+	.attach i {
+		color: #000000;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.rightContentPortfolio h1 {
+		font-family: BrandonBlack;
+		font-size: 30pt;
+		color: #000000;
+		margin-bottom: 20px;
+	}
+
+	.rightContentPortfolio h2 {
+		margin-top: 10px;
+		font-family: BrandonBlack;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	.rightContentPortfolio p {
+		font-family: BrandonLight;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	/* ================================== */
+	/* =========== CV CONTENT =========== */
+	/* ================================== */
+
+	.leftContentCV {
+		position: fixed;
+		bottom: 0px;
+		z-index: -1;
+		width: 480px;
+		height: 762px;
+		margin-bottom: 59px;
+		background-size: 500px;
+		background-repeat: no-repeat;
+		background-image: none;
+	}
+
+	.rightContentCV {
+		float: left;
+		width: 440px;
+		margin-top: 100px;
+		margin-left: 20px;
+		height: auto;
+	}
+
+	.rightContentCV h1 {
+		font-family: BrandonBlack;
+		font-size: 40pt;
+		color: #000000;
+		margin-bottom: 40px;
+	}
+
+	.rightContentCV h2 {
+		margin-top: 10px;
+		font-family: BrandonBlack;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	.rightContentCV p {
+		font-family: BrandonLight;
+		font-size: 13pt;
+		color: #000000;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	/* ================================== */
+	/* ========= BOTTOM BORDER ========== */
+	/* ================================== */
+
+	#bottomBorder {
+		position: fixed;
+		bottom: 0;
+		background-color: #000000;
+		height: 60px;
+		width: 100%;
+	}
+
+	.links {
+		width: 480px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.links a i {
+		text-decoration: none;
+		float: right;
+		margin-top: 12px;
+		margin-right: 50px;
+		color: #ececec;
+	}
+
+	.links a:link {
+		color: #000000;
+	}
+
+	.links a:visited {
+		color: #000000;
+	}
+
+	.links a:hover {
+		color: #000000;
+	}
+
+	.links a:active {
+		color: #000000;
+	}
+
+	/* ================================== */
+	/* ================================== */
+	/* ================================== */
+
+	.thumb {
+		float:left; /* must be floated for same cross browser position of larger image */
+		position:relative;
+		margin-right: 5px;
+	}
+	.thumb:hover {
+		border:0; /* IE6 needs this to show large image */
+		z-index:1;
+	}
+	.thumb span { 
+		position:absolute;
+		visibility:hidden;
+	}
+	.thumb:hover span { 
+		visibility:visible;
+		bottom:55px; left:55px; 
 	}
 }
