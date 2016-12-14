@@ -1,0 +1,2 @@
+Slider: 		http://jqueryui.com/slider/#range
+Google Maps API: 	https://developers.google.com/maps/documentation/javascript/reference

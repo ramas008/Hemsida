@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <title>Project Informationsvisualisering</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <style type="text/css">
+      html { height: 100%;}
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 85%; width: 100%; }
+      #timelinecontainer { height: 15%; width: 800px; margin-right: auto; margin-left: auto; }
+    </style>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWA_6zwclfUUY4JZNgFWvZ4xUKUD4YpgU&amp;sensor=true">
+    </script>
+
+    <script>
+      function initialize() 
+      {
+        d3.csv("Earthquakes_Europe-1901-1983.csv", function (data) {
+
+          //Styles
+          var styles = [
+          {
+            featureType: "poi",
+            elementType: "all",
+            stylers: [ { visibility: "off" } ]
+          },
+
+          {
+            featureType: "water",
+            elementType: "labels",
+            stylers: [ { visibility: "off" } ]
+          },
+
+          {
+            featureType: "road",
+            elementType: "all",
+            stylers: [ { visibility: "off" } ]
+          },
+
+          {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [ { visibility: "off" }, ]
+          },
+         
+          {
+            featureType: "transit",
+            elementType: "all",
+            stylers: [ { visibility: "off" } ]
+          },
+
+          {
+            featureType: "administrative",
+            elementType: "geometry",
+            stylers: [ { color: '#000000' },
+                       { weight: 1 }, ]
+          },
+
+          ];
+
+          //Mapoptions
+          var mapOptions = 
+          {
+            center: new google.maps.LatLng(47.47,7.75),
+            zoom: 5,
+          }
+
+          //Declaring the map
+          var map = new google.maps.Map(document.getElementById("map-canvas"),
+              mapOptions);
+
+          //Adding the Styles
+          map.setOptions({styles: styles});
+
+          //Adding All Markes with unic infowindow
+          var image = 'italy.png';
+          var newMarkers = {};
+          for (var i = 1901; i < 1984; i++) {
+              newMarkers[i] = new Array();
+            }
+
+          var infowindow = new google.maps.InfoWindow();
+          for (var i = 0; i < data.length; i++) 
+          {
+              image = "Images/" + data[i].country + ".png";
+              var myLatlng = new google.maps.LatLng(data[i].y,data[i].x);
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data[i].code,
+                id: data[i].year,
+                icon: image,
+        
+              });
+
+              //Content for each marker
+              marker.content = '<div id="content">'+
+                  '<div id="siteNotice">'+
+                  '</div>'+
+                  '<h1>' + data[i].country + ', ' + data[i].place + '</h1>'+
+                  '<div>'+
+                  '<p><b>Date:</b> ' + data[i].year + ' / ' + data[i].month + ' / ' + data[i].day + '</p>'+
+                  '<p><b>Depth:</b> ' + data[i].depth  + ' km <br>' +
+                     '<b>Magnitude:</b> ' + data[i].magnitude + '<br>' +
+                     '<b>Intensity:</b> ' + data[i].intensity + '</p>'+
+                  '<p>Informaion from: <a href="Earthquakes_Europe-1901-1983.csv">Earthquakes_Europe-1901-1983</a></p>'+
+                  '</div>'+
+                  '</div>';
+
+              //Adding click function to marker
+              google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(this.content);
+                infowindow.open(this.getMap(), this);
+
+              }); 
+              
+              //allMyMarkers.push( marker );
+
+              newMarkers[marker.id].push(marker);
+
+          };
+
+          var holder;
+          var min;
+          var max;
+          var lastMax = 1983;
+          var lastMin = 1901;
+          var distance;
+
+          $(function() {
+          $( "#slider-range" ).slider({
+            range: true,
+            min: 1901,
+            max: 1983,
+            values: [ 1901, 1983 ],
+            slide: function( event, ui ) {
+              $( "#amount" ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+              
+              holder = $( "#amount" )[0].value.split(" - ");
+              min = + holder[0];
+              max = + holder[1];
+
+              if(lastMax == max){
+                distance = Math.abs(lastMin-min);
+
+                for (var i = 0; i < distance; i++) {
+                  if(lastMin < min){
+                    for (var j = 0; j < newMarkers[lastMin+i].length; j++) {
+                      newMarkers[lastMin+i][j].setVisible(false); 
+                    }           
+                  }
+                  else{
+                    for (var j = 0; j < newMarkers[min+i].length; j++) {
+                      newMarkers[min+i][j].setVisible(true);
+                    }
+                  }  
+                }
+                
+              }
+              else{
+                  distance = Math.abs(lastMax-max);
+                 
+                for (var i = 0; i < distance; i++) {
+                  if(lastMax < max){
+                    for (var j = 0; j < newMarkers[max-i].length; j++) {
+                      newMarkers[max-i][j].setVisible(true);                    
+                    }     
+                  }
+                  else{
+                    for (var j = 0; j < newMarkers[lastMax-i].length; j++) {
+                      newMarkers[lastMax-i][j].setVisible(false);
+                    }
+                  }  
+                }  
+              }
+
+              lastMin = + min;
+              lastMax = + max;
+              
+            }
+          });
+
+          $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) +
+            " - " + $( "#slider-range" ).slider( "values", 1 ));
+
+        });
+        }) 
+      }
+      
+      //Initializing map
+      google.maps.event.addDomListener(window, 'load', initialize);
+   
+        
+
+      </script>
+
+  </head>
+
+
+  <body>
+
+    <div id="map-canvas">
+    </div>
+
+    <div id="timelinecontainer">
+      <p>
+        <label for="amount">Year range:</label>
+        <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+      </p>
+       
+      <div id="slider-range">
+      </div>
+    </div>
+
+  </body>
+
+
+
+</html> 
