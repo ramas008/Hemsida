@@ -234,6 +234,13 @@ body {
 	color: #000000;
 }
 
+.thesis {
+	background-image: url('Images/thesis/model.png');
+	background-position: center;
+	background-size: 420px;
+	background-repeat: no-repeat;
+}
+
 .warlockarena {
 	background-image: url('Images/warlockarena/warlockarena.jpg');
 	background-position: center;
